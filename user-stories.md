@@ -19,7 +19,7 @@ There really is just one `K` story here : get interaction between Folium and Str
 
 As a Streamlit User, I want to fill an ST dropdown (or other) control(s) using information from a select query done in the Folium Window (iframe or not), so that I can select from that list of features in the ST control.
 
-**Option 1 : live sync**
+**Option 1 : deliberate sync**
 
 A user could zoom/pan in the map to their heart's content without any ST control being updated.  Users could even select features without ST controls updating.  Only when the user is satisfied with their selection can they click a "Synchronize" button that would likely go through some data mangling function to extract e.g. filename or file url from the [JSON/dict] returned from the Folium selection and update the ST control with that information.
 
