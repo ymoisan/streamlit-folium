@@ -21,7 +21,7 @@ As a Streamlit User, I want to fill an ST dropdown (or other) control(s) using i
 
 **Option 1 : deliberate sync**
 
-A user could zoom/pan in the map to their heart's content without any ST control being updated.  Users could even select features without ST controls updating.  Only when the user is satisfied with their selection can they click a "Synchronize" button that would likely go through some data mangling function to extract e.g. filename or file url from the [JSON/dict] returned from the Folium selection and update the ST control with that information.
+A user could zoom/pan in the map to their heart's content without any ST control being updated.  Users could even select features without ST controls updating.  Only when the user is satisfied with their selection can they click a "Synchronize" button that would likely go through some data mangling function to extract e.g. filename or file url from the [JSON/dict] returned from the Folium selection and update the ST control with that information.  Or we just get a bbox for the current viewport or selection and pass it on to a function that will query some backend, like a STAC API, to get the list back and populate the ST controls accordingly ?
 
 **Option 2 : live sync**
 
@@ -29,4 +29,4 @@ Alternatively, users may want the content of a ST control to be continuously upd
 
 # Technical considerations
 
-The current version of Streamlit-Folium uses a static Streamlit component.  Is there a need for a true bi-directional control, given the fact that the map will be used to update ST, but not the other way around.  Could we add a return value to the current Folium.Map ?
+The current version of Streamlit-Folium uses a static Streamlit component.  Is there a need for a true bi-directional control, given the fact that the map will be used to update ST, but not the other way around ?  Could we add a return value to the current Folium.Map ?
